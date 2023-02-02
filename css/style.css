@@ -27,7 +27,7 @@ h2 {
   font-family: "Century", arial;
   font-weight: bold;
   text-align: center;
-  color: darkblue;
+  color: #090977;
   text-transform: uppercase;
   font-size: 30px; }
 
@@ -70,14 +70,14 @@ nav {
   display: block;
   width: 60px;
   height: 100vh;
-  background-color: darkblue;
+  background-color: #090977;
   text-align: center; }
   nav .brand {
     height: 50px;
     font-size: 3rem;
     font-weight: 600;
     display: block;
-    background-color: darkblue; }
+    background-color: #090977; }
     nav .brand img {
       padding-top: 15px; }
   nav .menu {
@@ -102,12 +102,75 @@ nav {
 .main {
   padding-left: 60px;
   padding-right: 0%;
-  background-color: darkblue; }
+  background-color: #090977; }
   .main header {
     display: flex;
     height: 60px;
     align-items: center;
     justify-content: center; }
+  .main .banner {
+    height: 250px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .main .slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 0; }
+    .main .slider ul {
+      padding: 0;
+      display: flex;
+      width: 1000%;
+      animation: slider 50s infinite alternate linear; }
+    .main .slider li {
+      width: 100%;
+      list-style: none; }
+      .main .slider li img {
+        width: 100%;
+        object-fit: cover; }
+
+@keyframes slider {
+  0% {
+    margin-left: 0%; }
+  10% {
+    margin-left: 0%; }
+  11% {
+    margin-left: -100%; }
+  21% {
+    margin-left: -100%; }
+  22% {
+    margin-left: -200%; }
+  33% {
+    margin-left: -200%; }
+  34% {
+    margin-left: -300%; }
+  44% {
+    margin-left: -300%; }
+  45% {
+    margin-left: -400%; }
+  55% {
+    margin-left: -400%; }
+  56% {
+    margin-left: -500%; }
+  65% {
+    margin-left: -500%; }
+  66% {
+    margin-left: -600%; }
+  76% {
+    margin-left: -600%; }
+  77% {
+    margin-left: -700%; }
+  86% {
+    margin-left: -700%; }
+  87% {
+    margin-left: -800%; }
+  94% {
+    margin-left: -800%; }
+  95% {
+    margin-left: -900%; }
+  100% {
+    margin-left: -900%; } }
   .main section {
     min-height: 80vh; }
   .main section:nth-child(odd) {
@@ -150,4 +213,6 @@ nav {
   h2 {
     font-size: 20px; }
   p {
-    font-size: 15px; } }
+    font-size: 15px; }
+  .main .banner {
+    height: 185px; } }
