@@ -1,0 +1,45 @@
+// TIPOGRAFIA A UTILIZAR
+$font-tittle: 'Goodtimes', sans-serif;
+$font-main: 'Century', arial;
+$font-p:'Fontello', sans-serif;
+
+// TAMAÑO DE FUENTE
+// Desktop
+$font-size-h1-lg: 40px;
+$font-size-h2-lg: 30px;
+$font-size-p-lg:  18px;
+// Tablet (768 or Less)
+$font-size-h1-md: 30px;
+$font-size-h2-md: 25px;
+$font-size-p-md:  17px;
+// Mobile (576 or Less)
+$font-size-h1-sm: 25px;
+$font-size-h2-sm: 20px;
+$font-size-p-sm:  15px;
+
+//COLORES
+$colors:(
+    // "navbar": white,
+    // "p":#ccc,
+    // "titles": #64ffda,
+    // "nav": #333,
+    // "brand": #171717,
+    // "active": #64ffda,
+    // "a": #999,
+    // "header": #373737,
+    // "header-text": white,
+    // "section-odd": #373737,
+    // "section-even":#444,
+    
+    "navbar": white,
+    "p":black,
+    "titles": darkblue,
+    "nav": darkblue,
+    "brand": darkblue,
+    "active": #64ffda,
+    "a": white,
+    "header": darkblue,
+    "header-text": white,
+    "section-odd": white,
+    "section-even":white,
+);

@@ -1,0 +1,74 @@
+.nav-link{
+    font-family: $font-main;
+    font-weight: bold;
+}
+
+.navbar-brand{
+    font-family: $font-tittle;
+    color:map-get($colors, "navbar" );
+    font-size: 25px;
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+/* REEMPLAZA ICONO DEL MENU */
+.navbar-toggler-icon {
+    background-image: url(../img/logo.png)!important;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    transition: all 0.50s ease-out;
+    transform-origin: center;
+    border-radius: 50%;
+}
+
+// NUEVA PAGINA
+nav{
+    position: fixed;
+    display: block;
+    width: 60px;
+    height: 100vh;
+    background-color: map-get($colors, "nav" );
+    text-align: center;
+
+    .brand{
+        height: 50px;
+        font-size: 3rem;
+        font-weight: 600;
+        display: block;
+        background-color: map-get($colors, "brand" );
+
+        img{
+            padding-top: 15px;
+        }
+    }
+
+    .menu{
+        display: block;
+        margin-top: 5rem;
+
+        a{
+            display: block;
+            color: map-get($colors, "a" );
+            -webkit-transition: color 320ms ease-in;
+            -moz-transition: color 320ms ease-in;
+            -ms-transition: color 320ms ease-in;
+            -o-transition: color 320ms ease-in;
+            transition: color 320ms ease-in;
+
+            &:hover{
+                color: map-get($colors, "active" );
+            }
+
+            &.active{
+                color: map-get($colors, "active" );
+            }
+
+        }
+
+    }
+
+}

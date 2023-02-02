@@ -1,0 +1,28 @@
+.home {
+    margin-top: 50px;
+}
+
+.main{
+    padding-left: 60px;
+    padding-right: 0%;
+    background-color: map-get($colors, "header" );
+
+    header{
+        display: flex;
+        height: 60px;
+        align-items: center;
+        justify-content:center;
+    }
+
+    section {
+        min-height: 80vh;
+    }
+
+    section:nth-child(odd) {
+        background-color: map-get($colors, "section-odd" );
+    }
+
+    section:nth-child(even) {
+        background-color: map-get($colors, "section-even" );
+    }
+}

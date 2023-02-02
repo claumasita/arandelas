@@ -1,0 +1,33 @@
+.productos{
+    margin-top: 50px;
+}
+
+.swiper{
+    height: 300px;
+    width: 700px;
+}
+
+.swiper-slide{
+    background-size:cover;
+    background-position: center;
+
+    &:nth-child(1n){
+        background-image: url("../img/img01.jpg");
+    }
+
+    &:nth-child(2n){
+        background-image: url("../img/img02.jpg");
+    }
+
+    &:nth-child(3n){
+        background-image: url("../img/img03.jpg");
+    }
+
+    &:nth-child(4n){
+        background-image: url("../img/img04.jpg");
+    }
+
+    &:nth-child(5n){
+        background-image: url("../img/img05.jpg");
+    }
+}

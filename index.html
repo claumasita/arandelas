@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fabricación y venta de Arandelas">
+    <meta name="author" content="Claudio Masa Desarrollos Web - claudio.masa@hotmail.com">
+    <meta name="copyright" content="Luis A. Rosa e Hijo SRL">
+    <!-- Titulo -->
+    <title>Luis A. Rosa e Hijo SRL</title>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Google Material Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <!-- Hoja de Estilos-->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <span class="brand">
+            <a href="#home"><img src="./img/logo.png" alt="Logo Arandelas" width="35px"></a>
+        </span>
+        <div class="menu">
+            <a href="#home" class="active scroll-page"><i class="material-icons">home</i></a><br>
+            <a href="#productos" class="scroll-page"><i class="material-icons">trip_origin</i></a><br>
+            <a href="#skills" class="scroll-page"><i class="material-icons">local_shipping</i></a><br>
+            <a href="#works" class="scroll-page"><i class="material-icons">contact_support</i></a><br>
+            <a href="#contact" class="scroll-page"><i class="material-icons">phone</i></a><br>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="container-fluid main">
+        <header>
+            <h1>LUIS A. ROSA E HIJO SRL</h1>
+        </header>
+        <!-- HOME -->
+        <section id="home">
+            <div class="container-fluid">
+                <h2>Nuestra Empresa</h2>
+                <p><strong>LUIS A. ROSA E HIJO S.R.L.</strong> es una empresa metalúrgica que se distingue por la
+                    calidad de
+                    sus
+                    productos, el buen nivel de producción y la atención al cliente. Características que han sido
+                    reconocidas por nuestros clientes, proveedores y colegas a lo largo y ancho del territorio
+                    argentino.</p>
+                <p>El origen de esta empresa familiar se remonta al año 1966, cuando Luis Rosa daba sus primeros pasos
+                    en la industria metalúrgica. Por ese entonces, realizaba diversos estampados de chapa entre los que
+                    se encontraban los utilizados para la confección de bisagras; cucharas de albañil y tijeras para la
+                    poda.</p>
+                <p>En el año 1971 decide focalizarse en la fabricación de arandelas, y por tal motivo funda su primera
+                    empresa a la que denomina homónimamente, Luis A. Rosa.</p>
+                <p>A fines del año 2007, resuelve formar una sociedad junto a su hijo Carlos, quien impulsa una
+                    transformación en la visión de la empresa al implementar nuevas tecnologías y proyectar constantes
+                    innovaciones. De esta fusión nace la nueva razón social denominada “Luis A. Rosa e Hijo SRL”.</p>
+                <p>Un año más tarde, se incorpora a la empresa Mariángeles Rosa, hija de Luis y hermana de Carlos.
+                    Avalada por su vasta experiencia en la materia, Mariángeles logra establecer a corto plazo nuevos
+                    criterios en nuestra política de gestión y en consecuencia grandes mejoras que han determinado el
+                    crecimiento proyectado para los próximos años.</p>
+            </div>
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section id="productos">
+            <div class="container-fluid">
+                <h2>Productos de máxima calidad</h2>
+                <p>En <strong>LUIS A. ROSA E HIJO SRL</strong> contamos con una amplia variedad de arandelas de gran calidad
+                    y un amplio
+                    stock para su entrega inmediata.</p>
+                <p>También ofrecemos distintos procesos de terminación, avalados por diversos proveedores que realizan
+                    <strong>de zincado azul, amarillo y negro, así como también galvanizados mecánico y caliente.</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="skills">
+            <div class="container-fluid">
+                <h2>servicios</h2>
+                <p>Main area of my expertise is front end development and everything related with this side of web.
+                    HTML, CSS, JS. Now, I am currently learning one of the front-end frameworks, Vue.js .</p><br>
+            </div>
+        </section>
+
+        <!-- CONSULTAS -->
+        <section id="works">
+            <div class="container-fluid">
+                <h2>consultas</h2>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contact">
+            <div class="container-fluid">
+                <h2>contacto</h2>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- SCRIPT PARA MENÚ y SCROLL -->
+    <script>
+        $(function () {
+            $('.scroll-page').on('click', function () {
+                var offset = 0;
+                var speed = 800;
+                var target = $(this.hash);
+
+                $('nav .menu a').each(function () {
+                    $(this).removeClass('active');
+                });
+
+                $(this).addClass('active');
+
+                $('html, body').animate({
+                    scrollTop: target.offset().top - offset
+                }, speed, 'swing');
+            });
+
+        });
+
+        $(window).scroll(function (event) {
+            var scrollPos = $(document).scrollTop();
+            console.log(scrollPos);
+            $('nav .menu a').each(function () {
+                var curLink = $(this);
+                var refElement = $(curLink.attr('href'));
+
+                if (refElement.position().top <= scrollPos + 60) {
+                    $('nav .menu a').removeClass('active');
+                    curLink.addClass('active');
+
+                } else {
+                    curLink.removeClass('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+// SETEOS GENERALES
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    margin: auto;
+    padding-top: 3px;
+    font-family: $font-tittle;
+    text-align: center;
+    color: map-get($colors, "header-text" );
+    font-size: $font-size-h1-lg;
+}
+
+h2{
+    font-family: $font-main;
+    font-weight: bold;
+    text-align: center;
+    color: map-get($colors, "titles" );
+    text-transform: uppercase;
+    font-size: $font-size-h2-lg;
+}
+
+p{
+    font-family: $font-main;
+    text-align: justify;
+    font-size: $font-size-p-lg;
+    color: map-get($colors, "p" );
+}

@@ -1,0 +1,38 @@
+//***********************************************************
+// RESPONSIVE: TABLET 768 (md)
+//***********************************************************
+@media only screen and (max-width: 767px){
+
+    // GENERALES
+    h1{
+        font-size: $font-size-h1-md;
+    }
+    
+    h2{
+        font-size: $font-size-h2-md;
+    }
+    
+    p{
+        font-size: $font-size-p-md;
+    }
+
+}
+
+//***********************************************************
+// RESPONSIVE: 576  (sm)
+//***********************************************************
+@media only screen and (max-width: 575px){
+
+        // GENERALES
+        h1{
+            font-size: $font-size-h1-sm;
+        }
+        
+        h2{
+            font-size: $font-size-h2-sm;
+        }
+        
+        p{
+            font-size: $font-size-p-sm;
+        }
+}
