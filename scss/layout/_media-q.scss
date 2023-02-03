@@ -16,6 +16,11 @@
         font-size: $font-size-p-md;
     }
 
+    .main{
+        .banner{
+            height: 150px;
+        }
+    }
 }
 
 //***********************************************************
@@ -38,7 +43,7 @@
 
         .main{
             .banner{
-                height: 185px;
+                height: 100px;
             }
         }
 }

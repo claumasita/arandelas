@@ -20,14 +20,14 @@ h1 {
   padding-top: 3px;
   font-family: "Goodtimes", sans-serif;
   text-align: center;
-  color: white;
+  color: #5e5e5e;
   font-size: 40px; }
 
 h2 {
   font-family: "Century", arial;
   font-weight: bold;
   text-align: center;
-  color: #090977;
+  color: black;
   text-transform: uppercase;
   font-size: 30px; }
 
@@ -40,6 +40,7 @@ p {
 body {
   width: 100%;
   max-width: 1300px;
+  min-width: 320px;
   margin: 0 auto; }
 
 .nav-link {
@@ -102,14 +103,14 @@ nav {
 .main {
   padding-left: 60px;
   padding-right: 0%;
-  background-color: #090977; }
+  background-color: #ebebeb; }
   .main header {
     display: flex;
     height: 60px;
     align-items: center;
     justify-content: center; }
   .main .banner {
-    height: 250px;
+    height: 200px;
     overflow: hidden;
     width: 100%;
     margin-top: 10px;
@@ -176,7 +177,7 @@ nav {
   .main section:nth-child(odd) {
     background-color: white; }
   .main section:nth-child(even) {
-    background-color: white; }
+    background-color: #ebebeb; }
 
 .productos {
   margin-top: 50px; }
@@ -205,7 +206,9 @@ nav {
   h2 {
     font-size: 25px; }
   p {
-    font-size: 17px; } }
+    font-size: 17px; }
+  .main .banner {
+    height: 150px; } }
 
 @media only screen and (max-width: 575px) {
   h1 {
@@ -215,4 +218,4 @@ nav {
   p {
     font-size: 15px; }
   .main .banner {
-    height: 185px; } }
+    height: 100px; } }
