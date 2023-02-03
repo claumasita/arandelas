@@ -24,6 +24,7 @@ h1 {
   font-size: 40px; }
 
 h2 {
+  letter-spacing: 1.5px;
   font-family: "Century", arial;
   font-weight: bold;
   text-align: center;
@@ -173,7 +174,7 @@ nav {
   100% {
     margin-left: -900%; } }
   .main section {
-    min-height: 80vh; }
+    min-height: 100vh; }
   .main section:nth-child(odd) {
     background-color: white; }
   .main section:nth-child(even) {
