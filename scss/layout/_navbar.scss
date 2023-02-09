@@ -71,4 +71,13 @@ nav{
 
     }
 
+    .toggle{
+        border-top: 1px solid white;
+        padding-top: 17px;
+    }
+
+    .theme-toggle:hover{
+        color: map-get($colors, "active" );
+    }
+
 }
