@@ -17,7 +17,7 @@ $font-size-h1-sm: 25px;
 $font-size-h2-sm: 20px;
 $font-size-p-sm:  15px;
 
-// PRUEBA DE LIGHT/DARK MODE
+// VARIABLES LIGHT/DARK MODE
 :root{
     //Light Mode Colors
     --colors-li-nav:  rgb(9, 9, 119);
@@ -37,13 +37,13 @@ $font-size-p-sm:  15px;
     --colors-drk-titles: #64ffda;
     --colors-drk-brand: #171717;
     --colors-drk-a: #999;
-    --colors-drk-header:#333;
-    --colors-drk-header-text: #64ffda;
+    --colors-drk-header:#252525;
+    --colors-drk-header-text: white;
     --colors-drk-section-odd: #373737;
     --colors-drk-section-even:#444;
 
     // Default Colors (Light Mode)
-    --colors-nav:  rgb(9, 9, 119);
+    --colors-nav:  var(-colors-li-nav);
     --colors-p: var(--colors-li-p);
     --colors-titles: var(--colors-li-titles);
     --colors-brand: var(--colors-li-brand);
@@ -57,17 +57,6 @@ $font-size-p-sm:  15px;
 
 //COLORES
 $colors:(
-    // "navbar": white,
-    // "p":#ccc,
-    // "titles": #64ffda,
-    // "nav": #171717,//#333,
-    // "brand": #171717,
-    // "active": #64ffda,
-    // "a": #999,
-    // "header": #333,//#373737,
-    // "header-text": #64ffda,
-    // "section-odd": #373737,
-    // "section-even":#444,
     "p":var(--colors-p),
     "titles": var(--colors-titles),
     "nav": var(--colors-nav),

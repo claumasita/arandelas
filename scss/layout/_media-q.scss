@@ -20,6 +20,15 @@
         .banner{
             height: 150px;
         }
+
+        #servicios{
+            ul{
+                li{
+                font-size: $font-size-p-md;
+                }
+            }
+        }
+
     }
 }
 
@@ -45,5 +54,14 @@
             .banner{
                 height: 100px;
             }
+
+            #servicios{
+                ul{
+                    li{
+                    font-size: $font-size-p-sm;
+                    }
+                }
+            }
+
         }
 }

@@ -26,11 +26,11 @@
   --colors-drk-titles: #64ffda;
   --colors-drk-brand: #171717;
   --colors-drk-a: #999;
-  --colors-drk-header:#333;
-  --colors-drk-header-text: #64ffda;
+  --colors-drk-header:#252525;
+  --colors-drk-header-text: white;
   --colors-drk-section-odd: #373737;
   --colors-drk-section-even:#444;
-  --colors-nav:  rgb(9, 9, 119);
+  --colors-nav:  var(-colors-li-nav);
   --colors-p: var(--colors-li-p);
   --colors-titles: var(--colors-li-titles);
   --colors-brand: var(--colors-li-brand);
@@ -145,6 +145,9 @@ nav {
     height: 60px;
     align-items: center;
     justify-content: center; }
+    .main header h1 {
+      padding-left: 15px;
+      padding-right: 15px; }
   .main .banner {
     height: 200px;
     overflow: hidden;
@@ -209,11 +212,16 @@ nav {
   100% {
     margin-left: -900%; } }
   .main section {
-    min-height: 100vh; }
+    min-height: 85vh; }
   .main section:nth-child(odd) {
     background-color: var(--colors-section-odd); }
   .main section:nth-child(even) {
     background-color: var(--colors-section-even); }
+  .main #servicios ul li {
+    font-family: "Century", arial;
+    text-align: justify;
+    font-size: 18px;
+    color: var(--colors-p); }
 
 .productos {
   margin-top: 50px; }
@@ -244,7 +252,9 @@ nav {
   p {
     font-size: 17px; }
   .main .banner {
-    height: 150px; } }
+    height: 150px; }
+  .main #servicios ul li {
+    font-size: 17px; } }
 
 @media only screen and (max-width: 575px) {
   h1 {
@@ -254,4 +264,6 @@ nav {
   p {
     font-size: 15px; }
   .main .banner {
-    height: 100px; } }
+    height: 100px; }
+  .main #servicios ul li {
+    font-size: 15px; } }

@@ -12,6 +12,11 @@
         height: 60px;
         align-items: center;
         justify-content:center;
+
+        h1{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 
     .banner{
@@ -46,18 +51,6 @@
     }
 
     @keyframes slider{
-        // 0%{margin-left: 0%;}
-        // 20%{margin-left: 0%;}
-        
-        // 25%{margin-left: -100%;}
-        // 45%{margin-left: -100%;}
-
-        // 50%{margin-left: -200%;}
-        // 70%{margin-left: -200%;}
-
-        // 75%{margin-left:  -300%;}
-        // 100%{margin-left: -300%;}
-
         0%{margin-left: 0%;}
         10%{margin-left: 0%;}
         
@@ -91,7 +84,7 @@
     }
 
     section {
-        min-height: 100vh;
+        min-height: 85vh;
     }
 
     section:nth-child(odd) {
@@ -100,5 +93,16 @@
 
     section:nth-child(even) {
         background-color: map-get($colors, "section-even" );
+    }
+
+    #servicios{
+        ul{
+            li{
+            font-family: $font-main;
+            text-align: justify;
+            font-size: $font-size-p-lg;
+            color: map-get($colors, "p" );
+            }
+        }
     }
 }
