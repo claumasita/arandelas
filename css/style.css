@@ -133,14 +133,31 @@ nav {
   nav .theme-toggle:hover {
     color: var(--colors-active); }
 
-.home {
-  margin-top: 50px; }
-
 .main {
   padding-left: 60px;
   padding-right: 0%;
   background-color: var(--colors-header); }
+  .main .banner {
+    position: relative;
+    height: 100%;
+    margin-top: 15px;
+    margin-bottom: 35px; }
+    .main .banner .swiper {
+      min-width: 200px;
+      max-width: 320px;
+      width: 40%;
+      height: 100%; }
+      .main .banner .swiper .swiper-wrapper .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        max-width: 320px;
+        width: 100%;
+        height: 100%; }
+        .main .banner .swiper .swiper-wrapper .swiper-slide img {
+          display: block;
+          width: 100%; }
   .main header {
+    margin-top: 20px;
     display: flex;
     height: 60px;
     align-items: center;
@@ -148,69 +165,6 @@ nav {
     .main header h1 {
       padding-left: 15px;
       padding-right: 15px; }
-  .main .banner {
-    height: 200px;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px; }
-  .main .slider {
-    width: 100%;
-    overflow: hidden;
-    padding: 0; }
-    .main .slider ul {
-      padding: 0;
-      display: flex;
-      width: 1000%;
-      animation: slider 50s infinite alternate linear; }
-    .main .slider li {
-      width: 100%;
-      list-style: none; }
-      .main .slider li img {
-        width: 100%;
-        object-fit: cover; }
-
-@keyframes slider {
-  0% {
-    margin-left: 0%; }
-  10% {
-    margin-left: 0%; }
-  11% {
-    margin-left: -100%; }
-  21% {
-    margin-left: -100%; }
-  22% {
-    margin-left: -200%; }
-  33% {
-    margin-left: -200%; }
-  34% {
-    margin-left: -300%; }
-  44% {
-    margin-left: -300%; }
-  45% {
-    margin-left: -400%; }
-  55% {
-    margin-left: -400%; }
-  56% {
-    margin-left: -500%; }
-  65% {
-    margin-left: -500%; }
-  66% {
-    margin-left: -600%; }
-  76% {
-    margin-left: -600%; }
-  77% {
-    margin-left: -700%; }
-  86% {
-    margin-left: -700%; }
-  87% {
-    margin-left: -800%; }
-  94% {
-    margin-left: -800%; }
-  95% {
-    margin-left: -900%; }
-  100% {
-    margin-left: -900%; } }
   .main section {
     min-height: 85vh; }
   .main section:nth-child(odd) {
@@ -251,8 +205,6 @@ nav {
     font-size: 25px; }
   p {
     font-size: 17px; }
-  .main .banner {
-    height: 150px; }
   .main #servicios ul li {
     font-size: 17px; } }
 
@@ -263,7 +215,5 @@ nav {
     font-size: 20px; }
   p {
     font-size: 15px; }
-  .main .banner {
-    height: 100px; }
   .main #servicios ul li {
     font-size: 15px; } }

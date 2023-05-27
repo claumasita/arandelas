@@ -21,6 +21,8 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/classic.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- Hoja de Estilos-->
     <link rel="stylesheet" href="./css/style.css">
     <!-- JS -->
@@ -31,7 +33,7 @@
 <body>
     <nav>
         <span class="brand">
-            <a href="#banner"><img src="./img/logo.png" alt="Logo Arandelas" width="35px"></a>
+            <a href="#top"><img src="./img/logo.png" alt="Logo Arandelas" width="35px"></a>
         </span>
         <div class="menu">
             <a href="#productos" class="active"><i class="material-icons">trip_origin</i></a><br>
@@ -70,11 +72,31 @@
     </nav>
 
     <!-- MAIN -->
-    <div class="container-fluid main" id="banner">
+    <div class="container-fluid main" id="top">
         <header>
             <h1>LUIS A. ROSA E HIJO SRL</h1>
         </header>
+
+        <!-- Swiper -->
         <div class="container-fluid banner">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/swiper01.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/swiper02.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/swiper03.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/swiper04.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container-fluid banner">
             <div class="row">
                 <div class="col-md-1 col-xs-1"></div>
                 <div class="col slider">
@@ -93,7 +115,8 @@
                 </div>
                 <div class="col-md-1 col-xs-1"></div>
             </div>
-        </div>
+        </div> -->
+
         <!-- PRODUCTOS -->
         <section id="productos">
             <div class="container-fluid">
@@ -165,6 +188,13 @@
 
     <!-- DARK MODE JS -->
     <script src="./js/toggles.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="./js/swipe.js"></script>
+
 </body>
 
 </html>
