@@ -166,11 +166,28 @@ nav {
       padding-left: 15px;
       padding-right: 15px; }
   .main section {
-    min-height: 85vh; }
+    min-height: 100vh; }
   .main section:nth-child(odd) {
     background-color: var(--colors-section-odd); }
   .main section:nth-child(even) {
     background-color: var(--colors-section-even); }
+  .main #productos .tabla-prod {
+    margin-top: 25px;
+    font-family: "Century", arial;
+    width: 90%;
+    height: fit-content;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll; }
+    .main #productos .tabla-prod table th {
+      background-color: var(--colors-section-odd);
+      position: sticky;
+      top: 0px;
+      text-align: center; }
+    .main #productos .tabla-prod table tr {
+      color: var(--colors-p); }
+      .main #productos .tabla-prod table tr td {
+        text-align: center; }
   .main #servicios ul li {
     font-family: "Century", arial;
     text-align: justify;

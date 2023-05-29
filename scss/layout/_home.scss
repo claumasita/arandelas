@@ -49,72 +49,8 @@
         }
     }
 
-    // .banner{
-    //     height: 200px;
-    //     overflow: hidden;
-    //     width: 100%;
-    //     margin-top: 10px;
-    //     margin-bottom: 10px;
-    // }
-
-    // .slider{
-    //     width: 100%;
-    //     overflow: hidden;
-    //     padding: 0;
-
-    //     ul{
-    //         padding: 0;
-    //         display: flex;
-    //         width: 1000%;
-    //         animation: slider 50s infinite alternate linear;
-    //     }
-
-    //     li{
-    //         width: 100%;
-    //         list-style: none;
-
-    //         img{
-    //             width: 100%;
-    //             object-fit: cover;
-    //         }
-    //     }
-    // }
-
-    // @keyframes slider{
-    //     0%{margin-left: 0%;}
-    //     10%{margin-left: 0%;}
-        
-    //     11%{margin-left: -100%;}
-    //     21%{margin-left: -100%;}
-
-    //     22%{margin-left: -200%;}
-    //     33%{margin-left: -200%;}
-
-    //     34%{margin-left: -300%;}
-    //     44%{margin-left: -300%;}
-
-    //     45%{margin-left: -400%;}
-    //     55%{margin-left: -400%;}
-
-    //     56%{margin-left: -500%;}
-    //     65%{margin-left: -500%;}
-
-    //     66%{margin-left: -600%;}
-    //     76%{margin-left: -600%;}
-
-    //     77%{margin-left: -700%;}
-    //     86%{margin-left: -700%;}
-
-    //     87%{margin-left: -800%;}
-    //     94%{margin-left: -800%;}
-
-    //     95%{margin-left:  -900%;}
-    //     100%{margin-left: -900%;}
-
-    // }
-
     section {
-        min-height: 85vh;
+        min-height: 100vh;
     }
 
     section:nth-child(odd) {
@@ -123,6 +59,34 @@
 
     section:nth-child(even) {
         background-color: map-get($colors, "section-even" );
+    }
+
+    #productos{
+        .tabla-prod{
+            margin-top: 25px;
+            font-family: $font-main;
+            width: 90%;
+            height: fit-content;
+            max-height: 300px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            
+            table{
+                th{
+                    background-color: map-get($colors, "section-odd" );
+                    position: sticky;
+                    top: 0px;
+                    text-align: center;
+                }
+                tr{
+                    color: map-get($colors, "p" );
+                    td{
+                        text-align: center;
+                    }
+                }
+            }
+
+        }
     }
 
     #servicios{
