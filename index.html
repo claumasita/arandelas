@@ -111,126 +111,190 @@
                 </p>
             </div>
 
-            <div class="container-fluid tabla-prod">
-                <table class="table table-sm table-borderless align-center">
-                    <thead>
-                        <th>Medida</th>
-                        <th>D.Ext</th>
-                        <th>D.Int</th>
-                        <th>Espesor</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1/8</td>
-                            <td>10.00</td>
-                            <td>3.50</td>
-                            <td>0.90</td>
-                        </tr>
-                        <tr>
-                            <td>5/16</td>
-                            <td>22.00</td>
-                            <td>8.50</td>
-                            <td>1.25</td>
-                        </tr>
-                        <tr>
-                            <td>1,1/8</td>
-                            <td>65.00</td>
-                            <td>31.00</td>
-                            <td>2.85</td>
-                        </tr>
-                        <tr>
-                            <td>1/8</td>
-                            <td>10.00</td>
-                            <td>3.50</td>
-                            <td>0.90</td>
-                        </tr>
-                        <tr>
-                            <td>5/16</td>
-                            <td>22.00</td>
-                            <td>8.50</td>
-                            <td>1.25</td>
-                        </tr>
-                        <tr>
-                            <td>1,1/8</td>
-                            <td>65.00</td>
-                            <td>31.00</td>
-                            <td>2.85</td>
-                        </tr>
-                        <tr>
-                            <td>1/8</td>
-                            <td>10.00</td>
-                            <td>3.50</td>
-                            <td>0.90</td>
-                        </tr>
-                        <tr>
-                            <td>5/16</td>
-                            <td>22.00</td>
-                            <td>8.50</td>
-                            <td>1.25</td>
-                        </tr>
-                        <tr>
-                            <td>1,1/8</td>
-                            <td>65.00</td>
-                            <td>31.00</td>
-                            <td>2.85</td>
-                        </tr>
-                        <tr>
-                            <td>1/8</td>
-                            <td>10.00</td>
-                            <td>3.50</td>
-                            <td>0.90</td>
-                        </tr>
-                        <tr>
-                            <td>5/16</td>
-                            <td>22.00</td>
-                            <td>8.50</td>
-                            <td>1.25</td>
-                        </tr>
-                        <tr>
-                            <td>1,1/8</td>
-                            <td>65.00</td>
-                            <td>31.00</td>
-                            <td>2.85</td>
-                        </tr>
-                        <tr>
-                            <td>1/8</td>
-                            <td>10.00</td>
-                            <td>3.50</td>
-                            <td>0.90</td>
-                        </tr>
-                        <tr>
-                            <td>5/16</td>
-                            <td>22.00</td>
-                            <td>8.50</td>
-                            <td>1.25</td>
-                        </tr>
-                        <tr>
-                            <td>1,1/8</td>
-                            <td>65.00</td>
-                            <td>31.00</td>
-                            <td>2.85</td>
-                        </tr>
-                        <tr>
-                            <td>1/8</td>
-                            <td>10.00</td>
-                            <td>3.50</td>
-                            <td>0.90</td>
-                        </tr>
-                        <tr>
-                            <td>5/16</td>
-                            <td>22.00</td>
-                            <td>8.50</td>
-                            <td>1.25</td>
-                        </tr>
-                        <tr>
-                            <td>1,1/8</td>
-                            <td>65.00</td>
-                            <td>31.00</td>
-                            <td>2.85</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h3>Buscar articulos</h3>
+            <div class="container-fluid articulos">
+
+                <div class="container-fluid buscar-prod">
+
+                    <div class="row justify-content-end me-1">Tolerancia</div>
+                    <!-- Diametro Exterior -->
+                    <div class="row">
+                        <div class="col align-self-center">
+                            <label for="d-ext" class="form-label">Diámetro Ext.</label>
+                        </div>
+                        <div class="col align-self-center">
+                            <input type="number" id="d-ext" class="form-control">
+                        </div>
+
+                        <div class="col-1 align-self-center">
+                            <label for="d-ext-tol" class="form-label">+/-</label>
+                        </div>
+                        <div class="col align-self-center">
+                            <input type="number" id="d-ext-tol" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Diametro Interior -->
+                    <div class="row">
+                        <div class="col align-self-center">
+                            <label for="d-int" class="form-label">Diámetro Int.</label>
+                        </div>
+                        <div class="col align-self-center">
+                            <input type="number" id="d-int" class="form-control">
+                        </div>
+                        <div class="col-1 align-self-center">
+                            <label for="d-int-tol" class="form-label">+/-</label>
+                        </div>
+                        <div class="col align-self-center">
+                            <input type="number" id="d-int-tol" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Espesor -->
+                    <div class="row">
+                        <div class="col align-self-center">
+                            <label for="espe" class="form-label">Espesor.</label>
+                        </div>
+                        <div class="col align-self-center">
+                            <input type="number" id="espe" class="form-control">
+                        </div>
+                        <div class="col-1 align-self-center">
+                            <label for="espe-tol" class="form-label">+/-</label>
+                        </div>
+                        <div class="col align-self-center">
+                            <input type="number" id="espe-tol" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Boton Buscar -->
+                    <div class="d-grid gap-2 justify-content-end mt-4">
+                        <button class="btn btn-primary" id="btn-buscar">Buscar</button>
+                    </div>
+                </div>
+    
+                <!-- Tabla de Articulos -->
+                <div class="container-fluid tabla-prod">
+                    <table class="table table-sm table-borderless align-center">
+                        <thead>
+                            <th>Medida</th>
+                            <th>D.Ext</th>
+                            <th>D.Int</th>
+                            <th>Espesor</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1/8</td>
+                                <td>10.00</td>
+                                <td>3.50</td>
+                                <td>0.90</td>
+                            </tr>
+                            <tr>
+                                <td>5/16</td>
+                                <td>22.00</td>
+                                <td>8.50</td>
+                                <td>1.25</td>
+                            </tr>
+                            <tr>
+                                <td>1,1/8</td>
+                                <td>65.00</td>
+                                <td>31.00</td>
+                                <td>2.85</td>
+                            </tr>
+                            <tr>
+                                <td>1/8</td>
+                                <td>10.00</td>
+                                <td>3.50</td>
+                                <td>0.90</td>
+                            </tr>
+                            <tr>
+                                <td>5/16</td>
+                                <td>22.00</td>
+                                <td>8.50</td>
+                                <td>1.25</td>
+                            </tr>
+                            <tr>
+                                <td>1,1/8</td>
+                                <td>65.00</td>
+                                <td>31.00</td>
+                                <td>2.85</td>
+                            </tr>
+                            <tr>
+                                <td>1/8</td>
+                                <td>10.00</td>
+                                <td>3.50</td>
+                                <td>0.90</td>
+                            </tr>
+                            <tr>
+                                <td>5/16</td>
+                                <td>22.00</td>
+                                <td>8.50</td>
+                                <td>1.25</td>
+                            </tr>
+                            <tr>
+                                <td>1,1/8</td>
+                                <td>65.00</td>
+                                <td>31.00</td>
+                                <td>2.85</td>
+                            </tr>
+                            <tr>
+                                <td>1/8</td>
+                                <td>10.00</td>
+                                <td>3.50</td>
+                                <td>0.90</td>
+                            </tr>
+                            <tr>
+                                <td>5/16</td>
+                                <td>22.00</td>
+                                <td>8.50</td>
+                                <td>1.25</td>
+                            </tr>
+                            <tr>
+                                <td>1,1/8</td>
+                                <td>65.00</td>
+                                <td>31.00</td>
+                                <td>2.85</td>
+                            </tr>
+                            <tr>
+                                <td>1/8</td>
+                                <td>10.00</td>
+                                <td>3.50</td>
+                                <td>0.90</td>
+                            </tr>
+                            <tr>
+                                <td>5/16</td>
+                                <td>22.00</td>
+                                <td>8.50</td>
+                                <td>1.25</td>
+                            </tr>
+                            <tr>
+                                <td>1,1/8</td>
+                                <td>65.00</td>
+                                <td>31.00</td>
+                                <td>2.85</td>
+                            </tr>
+                            <tr>
+                                <td>1/8</td>
+                                <td>10.00</td>
+                                <td>3.50</td>
+                                <td>0.90</td>
+                            </tr>
+                            <tr>
+                                <td>5/16</td>
+                                <td>22.00</td>
+                                <td>8.50</td>
+                                <td>1.25</td>
+                            </tr>
+                            <tr>
+                                <td>1,1/8</td>
+                                <td>65.00</td>
+                                <td>31.00</td>
+                                <td>2.85</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
         </section>
 
         <!-- HOME -->

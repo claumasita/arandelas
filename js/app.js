@@ -19,7 +19,6 @@ $(function () {
 
 $(window).scroll(function (event) {
     var scrollPos = $(document).scrollTop();
-    console.log(scrollPos);
     $('nav .menu a').each(function () {
         var curLink = $(this);
         var refElement = $(curLink.attr('href'));

@@ -62,10 +62,40 @@
     }
 
     #productos{
+
+        .articulos{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .buscar-prod{
+            margin-top: 25px;
+            width: 380px;
+
+            #btn-buscar{
+                font-family: $font-main !important;
+                text-align: justify;
+                letter-spacing: 1.5px;
+                font-weight: bold;
+            }
+
+            .row{
+                margin-top: 10px;
+            }
+
+            // Quitar Arrows de INPUT NUMERICOS
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+        }
+
         .tabla-prod{
             margin-top: 25px;
             font-family: $font-main;
-            width: 90%;
+            width: 380px;
             height: fit-content;
             max-height: 300px;
             overflow-x: hidden;

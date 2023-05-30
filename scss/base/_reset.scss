@@ -24,6 +24,24 @@ h2{
     font-size: $font-size-h2-lg;
 }
 
+h3{
+    letter-spacing: 1.5px;
+    font-family: $font-main;
+    font-weight: bold;
+    text-align: center;
+    color: map-get($colors, "titles" );
+    font-size: $font-size-p-lg;
+}
+
+.row{
+    // letter-spacing: 1.5px;
+    font-family: $font-main;
+    // font-weight: bold;
+    // text-align: center;
+    color: map-get($colors, "titles" );
+    font-size: $font-size-p-sm;
+}
+
 p{
     font-family: $font-main;
     text-align: justify;

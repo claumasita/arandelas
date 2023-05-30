@@ -63,6 +63,19 @@ h2 {
   text-transform: uppercase;
   font-size: 30px; }
 
+h3 {
+  letter-spacing: 1.5px;
+  font-family: "Century", arial;
+  font-weight: bold;
+  text-align: center;
+  color: var(--colors-titles);
+  font-size: 18px; }
+
+.row {
+  font-family: "Century", arial;
+  color: var(--colors-titles);
+  font-size: 15px; }
+
 p {
   font-family: "Century", arial;
   text-align: justify;
@@ -171,10 +184,28 @@ nav {
     background-color: var(--colors-section-odd); }
   .main section:nth-child(even) {
     background-color: var(--colors-section-even); }
+  .main #productos .articulos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .main #productos .buscar-prod {
+    margin-top: 25px;
+    width: 380px; }
+    .main #productos .buscar-prod #btn-buscar {
+      font-family: "Century", arial !important;
+      text-align: justify;
+      letter-spacing: 1.5px;
+      font-weight: bold; }
+    .main #productos .buscar-prod .row {
+      margin-top: 10px; }
+    .main #productos .buscar-prod input::-webkit-outer-spin-button,
+    .main #productos .buscar-prod input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
   .main #productos .tabla-prod {
     margin-top: 25px;
     font-family: "Century", arial;
-    width: 90%;
+    width: 380px;
     height: fit-content;
     max-height: 300px;
     overflow-x: hidden;
