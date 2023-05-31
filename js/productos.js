@@ -1,13 +1,9 @@
 class Producto{
-    constructor(codigo, medida, tipo, d_e, d_i, esp, c_kg, observ){
-        this.codigo  = codigo;
+    constructor(medida, d_e, d_i, esp){
         this.medida  = medida;
-        this.tipo    = tipo;
         this.d_e     = d_e;
         this.d_i     = d_i;
         this.esp     = esp;
-        this.c_kg    = c_kg;
-        this.observ  = observ;
     }
 }
 
@@ -57,17 +53,12 @@ const guardarProductosStorage=(enJson)=>{
 // Agrega los objetos de todos los diseños al Array correspondiente
 //******************************************************************//
 const cargarProductos = async () =>{
-    
-    // const objetos = getSessionStorageToArray("productos");
-    // console.log(objetos);
-    // if ( objetos.length > 0 ){return};
 
     let rutaJson = "./json/articulos.json";
 
     try {
-        const resp      = await fetch(rutaJson);
-        // const productos = await resp.json();
-        productos = await resp.json();
+        const resp = await fetch(rutaJson);
+        productos  = await resp.json();
         guardarProductosStorage(JSON.stringify(productos));
     } catch (error) {
         console.log(error);
@@ -117,10 +108,6 @@ const buscar=()=>{
         if (isNaN(txtDiamIntTol)){txtDiamIntTol = 0;}
         if (isNaN(txtEspesorTol)){txtEspesorTol = 0;}
 
-        // console.log(txtDiamExt);
-        // console.log(txtDiamInt);
-        // console.log(txtEspesor);
-
         productos.forEach(producto => {
             let prodValido;
             let rangoFrom = 0;
@@ -167,14 +154,10 @@ const buscar=()=>{
 
             if (prodValido){
                 prodFiltrados.push(new Producto(
-                    producto.codigo,
                     producto.medida,
-                    producto.tipo,
                     producto.d_e,
                     producto.d_i,
                     producto.esp,
-                    producto.c_kg,
-                    producto.observ,
                 ));
             }
 
