@@ -181,7 +181,7 @@ nav {
       padding-left: 15px;
       padding-right: 15px; }
   .main section {
-    min-height: 100vh; }
+    min-height: 70vh; }
   .main section:nth-child(odd) {
     background-color: var(--colors-section-odd); }
   .main section:nth-child(even) {
@@ -235,6 +235,13 @@ nav {
     text-align: justify;
     font-size: 18px;
     color: var(--colors-p); }
+  .main #contact p {
+    text-align: center; }
+  .main #contact a {
+    color: var(--colors-titles);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 95%; }
 
 .productos {
   margin-top: 50px; }

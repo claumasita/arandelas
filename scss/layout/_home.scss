@@ -52,7 +52,7 @@
     }
 
     section {
-        min-height: 100vh;
+        min-height: 70vh;
     }
 
     section:nth-child(odd) {
@@ -144,4 +144,18 @@
             }
         }
     }
+
+    #contact{
+        p{
+            text-align: center;
+        }
+
+        a{
+            color: map-get($colors, "titles" );
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 95%;
+        }
+    }
+
 }
