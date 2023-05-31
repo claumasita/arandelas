@@ -198,6 +198,8 @@ nav {
       font-weight: bold; }
     .main #productos .buscar-prod .row {
       margin-top: 10px; }
+    .main #productos .buscar-prod input {
+      text-align: right; }
     .main #productos .buscar-prod input::-webkit-outer-spin-button,
     .main #productos .buscar-prod input::-webkit-inner-spin-button {
       -webkit-appearance: none;

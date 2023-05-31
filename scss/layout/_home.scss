@@ -84,6 +84,10 @@
                 margin-top: 10px;
             }
 
+            input{
+                text-align: right;
+            }
+
             // Quitar Arrows de INPUT NUMERICOS
             input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button {

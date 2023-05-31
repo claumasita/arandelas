@@ -11,7 +11,7 @@ class Producto{
     }
 }
 
-// const productos = [];
+let productos = [];
 
 //******************************************************************//
 // Recupera JSON desde SessionStorage
@@ -66,11 +66,126 @@ const cargarProductos = async () =>{
 
     try {
         const resp      = await fetch(rutaJson);
-        const productos = await resp.json();
+        // const productos = await resp.json();
+        productos = await resp.json();
         guardarProductosStorage(JSON.stringify(productos));
     } catch (error) {
         console.log(error);
     }
+}
+
+//******************************************************************//
+// Agrega los productos filtrados a la Tabla de Salida
+//******************************************************************//
+const agregarProductosFiltrados=(productos)=>{
+    const tbody = document.querySelector("#filtrados");
+    tbody.innerHTML = "";
+    console.log("RESULTADO");
+    console.log(productos);
+    productos.forEach(producto => {
+        tbody.innerHTML = tbody.innerHTML +
+        `
+        <tr>
+        <td>${producto.medida}</td>
+        <td>${producto.d_e}</td>
+        <td>${producto.d_i}</td>
+        <td>${producto.esp}</td>
+        </tr>
+        `;
+    });
+}
+
+//******************************************************************//
+// Listener BUSCAR
+//******************************************************************//
+const buscar=()=>{
+
+    const btnBuscar = document.querySelector("#btn-buscar");
+    btnBuscar.addEventListener("click", () =>{
+        let prodFiltrados = [];
+
+        // Get Values from Inputs
+        const txtDiamExt = parseFloat(document.querySelector("#d-ext").value);
+        const txtDiamInt = parseFloat(document.querySelector("#d-int").value);
+        const txtEspesor = parseFloat(document.querySelector("#espe").value);
+
+        // Get Tolerances from Inputs
+        let txtDiamExtTol = parseFloat(document.querySelector("#d-ext-tol").value);
+        let txtDiamIntTol = parseFloat(document.querySelector("#d-int-tol").value);
+        let txtEspesorTol = parseFloat(document.querySelector("#espe-tol").value);
+
+        // Set Values for Tolerance isNaN
+        if (isNaN(txtDiamExtTol)){txtDiamExtTol = 0;}
+        if (isNaN(txtDiamIntTol)){txtDiamIntTol = 0;}
+        if (isNaN(txtEspesorTol)){txtEspesorTol = 0;}
+
+        // console.log(txtDiamExt);
+        // console.log(txtDiamInt);
+        // console.log(txtEspesor);
+
+        productos.forEach(producto => {
+            let prodValido;
+            let rangoFrom = 0;
+            let rangoTo = 0;
+
+            // Filtro Diametro Exterior
+            if (isNaN(txtDiamExt) == false){
+
+                // Rangos
+                rangoFrom = txtDiamExt - Math.abs(txtDiamExtTol);
+                rangoTo   = txtDiamExt + Math.abs(txtDiamExtTol);
+                if  (producto.d_e >= rangoFrom && producto.d_e <= rangoTo){
+                    prodValido = true;
+                }else{
+                    prodValido = false;
+                }
+            }
+
+            // Filtro Diametro Interior
+            if (isNaN(txtDiamInt) == false && prodValido != false){
+
+                // Rangos
+                rangoFrom = txtDiamInt - Math.abs(txtDiamIntTol);
+                rangoTo   = txtDiamInt + Math.abs(txtDiamIntTol);
+                if  (producto.d_i >= rangoFrom && producto.d_i <= rangoTo){
+                    prodValido = true;
+                }else{
+                    prodValido = false;
+                }
+            }
+
+            // Filtro Espesor
+            if (isNaN(txtEspesor) == false && prodValido != false){
+
+                // Rangos
+                rangoFrom = txtEspesor - Math.abs(txtEspesorTol);
+                rangoTo   = txtEspesor + Math.abs(txtEspesorTol);
+                if  (producto.esp >= rangoFrom && producto.esp <= rangoTo){
+                    prodValido = true;
+                }else{
+                    prodValido = false;
+                }
+            }
+
+            if (prodValido){
+                prodFiltrados.push(new Producto(
+                    producto.codigo,
+                    producto.medida,
+                    producto.tipo,
+                    producto.d_e,
+                    producto.d_i,
+                    producto.esp,
+                    producto.c_kg,
+                    producto.observ,
+                ));
+            }
+
+        });
+
+        agregarProductosFiltrados(prodFiltrados);
+
+    });
+
 }
 
 //******************************************************************//
@@ -79,6 +194,7 @@ const cargarProductos = async () =>{
 const inicio = async () =>{
     // Carga de Productos
     await cargarProductos();
+    buscar();
 }
 
 //******************************************************************//
