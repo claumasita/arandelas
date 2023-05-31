@@ -80,8 +80,6 @@ const cargarProductos = async () =>{
 const agregarProductosFiltrados=(productos)=>{
     const tbody = document.querySelector("#filtrados");
     tbody.innerHTML = "";
-    console.log("RESULTADO");
-    console.log(productos);
     productos.forEach(producto => {
         tbody.innerHTML = tbody.innerHTML +
         `
@@ -189,12 +187,34 @@ const buscar=()=>{
 }
 
 //******************************************************************//
+// Listener LIMPIAR
+//******************************************************************//
+const btnLimpiar=()=>{
+
+    const btnLimpiar = document.querySelector("#btn-limpiar");
+    btnLimpiar.addEventListener("click", () =>{
+        const tbody = document.querySelector("#filtrados");
+        tbody.innerHTML = "";
+
+        document.querySelector("#d-ext").value = "";
+        document.querySelector("#d-int").value = "";
+        document.querySelector("#espe").value = "";
+
+        document.querySelector("#d-ext-tol").value = "2.00";
+        document.querySelector("#d-int-tol").value = "2.00";
+        document.querySelector("#espe-tol").value = "0.20";
+
+    });
+}
+
+//******************************************************************//
 // Función Principal
 //******************************************************************//
 const inicio = async () =>{
     // Carga de Productos
     await cargarProductos();
     buscar();
+    btnLimpiar();
 }
 
 //******************************************************************//

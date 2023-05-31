@@ -34,10 +34,7 @@ h3{
 }
 
 .row{
-    // letter-spacing: 1.5px;
     font-family: $font-main;
-    // font-weight: bold;
-    // text-align: center;
     color: map-get($colors, "titles" );
     font-size: $font-size-p-sm;
 }

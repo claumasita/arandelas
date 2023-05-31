@@ -109,18 +109,21 @@
                     <strong>de zincado azul, amarillo y negro, así como también galvanizados mecánico y
                         caliente.</strong>
                 </p>
+                <p>
+                    Puede utilizar el <strong>buscador de articulos</strong> o si lo prefiere, descargar la lista de productos desde 
+                    <a href="./files/ListaArticulos.pdf" target=_blank>aquí</a>.
+                </p>
             </div>
 
             <h3>Buscar articulos</h3>
             <div class="container-fluid articulos">
-
                 <div class="container-fluid buscar-prod">
 
-                    <div class="row justify-content-end me-1">Tolerancia</div>
+                    <div class="row justify-content-end">Tolerancia (mm)</div>
                     <!-- Diametro Exterior -->
                     <div class="row">
                         <div class="col align-self-center">
-                            <label for="d-ext" class="form-label">Diámetro Ext.</label>
+                            <label for="d-ext" class="form-label">Diámetro Ext.(mm)</label>
                         </div>
                         <div class="col align-self-center">
                             <input type="number" id="d-ext" class="form-control">
@@ -130,14 +133,14 @@
                             <label for="d-ext-tol" class="form-label">+/-</label>
                         </div>
                         <div class="col align-self-center">
-                            <input type="number" id="d-ext-tol" class="form-control" value="0.01">
+                            <input type="number" id="d-ext-tol" class="form-control" value="2.00">
                         </div>
                     </div>
 
                     <!-- Diametro Interior -->
                     <div class="row">
                         <div class="col align-self-center">
-                            <label for="d-int" class="form-label">Diámetro Int.</label>
+                            <label for="d-int" class="form-label">Diámetro Int.(mm)</label>
                         </div>
                         <div class="col align-self-center">
                             <input type="number" id="d-int" class="form-control">
@@ -146,14 +149,14 @@
                             <label for="d-int-tol" class="form-label">+/-</label>
                         </div>
                         <div class="col align-self-center">
-                            <input type="number" id="d-int-tol" class="form-control" value="0.01">
+                            <input type="number" id="d-int-tol" class="form-control" value="2.00">
                         </div>
                     </div>
 
                     <!-- Espesor -->
                     <div class="row">
                         <div class="col align-self-center">
-                            <label for="espe" class="form-label">Espesor.</label>
+                            <label for="espe" class="form-label">Espesor (mm)</label>
                         </div>
                         <div class="col align-self-center">
                             <input type="number" id="espe" class="form-control">
@@ -162,13 +165,14 @@
                             <label for="espe-tol" class="form-label">+/-</label>
                         </div>
                         <div class="col align-self-center">
-                            <input type="number" id="espe-tol" class="form-control" value="0.01">
+                            <input type="number" id="espe-tol" class="form-control" value="0.20" step="0.10">
                         </div>
                     </div>
 
-                    <!-- Boton Buscar -->
-                    <div class="d-grid gap-2 justify-content-end mt-4">
-                        <button class="btn btn-primary" id="btn-buscar">Buscar</button>
+                    <!-- Boton Buscar/Limpiar -->
+                    <div class="d-flex justify-content-end mt-5">
+                        <button class="btn btn-warning" id="btn-limpiar" >Limpiar</button>
+                        <button class="btn btn-primary ms-4" id="btn-buscar">Buscar</button>
                     </div>
                 </div>
     
@@ -177,12 +181,12 @@
                     <table class="table table-sm table-borderless align-center">
                         <thead>
                             <th>Medida</th>
-                            <th>D.Ext</th>
-                            <th>D.Int</th>
-                            <th>Espesor</th>
+                            <th>D.Ext (mm)</th>
+                            <th>D.Int (mm)</th>
+                            <th>Espesor (mm)</th>
                         </thead>
                         <tbody id="filtrados">
-                            <tr>
+                            <!-- <tr>
                                 <td>1/8</td>
                                 <td>10.00</td>
                                 <td>3.50</td>
@@ -289,7 +293,7 @@
                                 <td>65.00</td>
                                 <td>31.00</td>
                                 <td>2.85</td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>

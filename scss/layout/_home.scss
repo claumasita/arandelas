@@ -1,5 +1,5 @@
 .main{
-    padding-left: 60px;
+    padding-left: 50px;
     padding-right: 0%;
     background-color: map-get($colors, "header" );
 
@@ -63,6 +63,12 @@
 
     #productos{
 
+        a{
+            color: map-get($colors, "titles" );
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         .articulos{
             display: flex;
             flex-direction: row;
@@ -70,14 +76,16 @@
         }
 
         .buscar-prod{
-            margin-top: 25px;
+            margin-top: 5px;
+            margin-bottom: 25px;
             width: 380px;
 
-            #btn-buscar{
+            .btn{
                 font-family: $font-main !important;
-                text-align: justify;
+                text-align: center;
                 letter-spacing: 1.5px;
                 font-weight: bold;
+                width: 100px;
             }
 
             .row{
@@ -98,6 +106,7 @@
 
         .tabla-prod{
             margin-top: 25px;
+            margin-bottom: 30px;
             font-family: $font-main;
             width: 380px;
             height: fit-content;
