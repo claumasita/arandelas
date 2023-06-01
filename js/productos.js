@@ -193,7 +193,7 @@ const btnLimpiar=()=>{
 //******************************************************************//
 // Mostrar Imagenes (Carrusel)
 //******************************************************************//
-const mostrarImagenes=()=>{
+const mostrarImagenes = async () =>{
     const carrusel = document.querySelector("#imagenes");
     for (let i = 1; i <= 18; i++) {
         let imgNumber = i.toString().padStart(2, '0');
@@ -205,21 +205,28 @@ const mostrarImagenes=()=>{
 }
 
 //******************************************************************//
+// Oculta el Loader luego de cargar la página
+//******************************************************************//
+const ocultarLoader =()=>{
+    window.onload = function(){
+        $(".preloader").fadeOut();
+        $("body").removeClass("no-scroll");
+    }
+}
+
+//******************************************************************//
 // Función Principal
 //******************************************************************//
 const inicio = async () =>{
     // Carga de Productos
     await cargarProductos();
-    mostrarImagenes();
+    await mostrarImagenes();
     btnBuscar();
     btnLimpiar();
+    ocultarLoader();
 }
 
 //******************************************************************//
 //                      INICIO DEL PROGRAMA                         //
 //******************************************************************//
 inicio();
-window.onload = function(){
-    $(".preloader").fadeOut();
-    $("body").removeClass("no-scroll");
-}
