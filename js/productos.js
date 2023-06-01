@@ -193,7 +193,7 @@ const btnLimpiar=()=>{
 //******************************************************************//
 // Mostrar Imagenes (Carrusel)
 //******************************************************************//
-const mostrarImagenes = async () =>{
+const mostrarImagenes = () =>{
     const carrusel = document.querySelector("#imagenes");
     for (let i = 1; i <= 18; i++) {
         let imgNumber = i.toString().padStart(2, '0');
@@ -220,7 +220,7 @@ const ocultarLoader =()=>{
 const inicio = async () =>{
     // Carga de Productos
     await cargarProductos();
-    await mostrarImagenes();
+    mostrarImagenes();
     btnBuscar();
     btnLimpiar();
     ocultarLoader();
