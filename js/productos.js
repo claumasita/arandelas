@@ -223,10 +223,10 @@ const inicio = async () =>{
     mostrarImagenes();
     btnBuscar();
     btnLimpiar();
-    ocultarLoader();
 }
 
 //******************************************************************//
 //                      INICIO DEL PROGRAMA                         //
 //******************************************************************//
 inicio();
+ocultarLoader();
