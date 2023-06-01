@@ -219,3 +219,7 @@ const inicio = async () =>{
 //                      INICIO DEL PROGRAMA                         //
 //******************************************************************//
 inicio();
+window.onload = function(){
+    $(".preloader").fadeOut();
+    $("body").removeClass("no-scroll");
+}

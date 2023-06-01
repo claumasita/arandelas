@@ -34,7 +34,25 @@
     <script src="./js/app.js"></script>
 </head>
 
-<body>
+<body class="no-scroll">
+
+    <div class="preloader">
+        <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <nav>
         <span class="brand">
             <a href="#top"><img src="./img/logo.png" alt="Logo Arandelas" width="35px"></a>
@@ -49,10 +67,10 @@
 
         <!-- DARK MODE BUTTON -->
         <div class="toggle">
-            <button class="theme-toggle" type="button" aria-label="Toggle theme"
-                id="toggle-button">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="40px" height="40px" color="var(--colors-a)"
-                    fill="currentColor" stroke-linecap="round" class="theme-toggle__classic" viewBox="0 0 32 32">
+            <button class="theme-toggle" type="button" aria-label="Toggle theme" id="toggle-button">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="40px" height="40px"
+                    color="var(--colors-a)" fill="currentColor" stroke-linecap="round" class="theme-toggle__classic"
+                    viewBox="0 0 32 32">
                     <clipPath id="theme-toggle__classic__cutout">
                         <path d="M0-5h30a1 1 0 0 0 9 13v24H0Z" />
                     </clipPath>
@@ -103,7 +121,8 @@
                         caliente.</strong>
                 </p>
                 <p>
-                    Puede utilizar el <strong>buscador de articulos</strong> o si lo prefiere, descargar la lista de productos desde 
+                    Puede utilizar el <strong>buscador de articulos</strong> o si lo prefiere, descargar la lista de
+                    productos desde
                     <a href="./files/ListaArticulos.pdf" target=_blank>aquí</a>.
                 </p>
             </div>
@@ -164,11 +183,11 @@
 
                     <!-- Boton Buscar/Limpiar -->
                     <div class="d-flex justify-content-end mt-5">
-                        <button class="btn btn-warning" id="btn-limpiar" >Limpiar</button>
+                        <button class="btn btn-warning" id="btn-limpiar">Limpiar</button>
                         <button class="btn btn-primary ms-4" id="btn-buscar">Buscar</button>
                     </div>
                 </div>
-    
+
                 <!-- Tabla de Articulos -->
                 <div class="container-fluid tabla-prod">
                     <table class="table table-sm table-borderless align-center">
@@ -218,9 +237,13 @@
             <div class="container-fluid">
                 <h2>servicios</h2>
                 <ul>
-                    <li>Estampado de diversos productos de acuerdo al plano del diseño y el/los material/es requerido/s.</li>
-                    <li>Contamos con vehículos propios para poder realizar entregas en Gran Buenos Aires y en Capital Federal a corto plazo. También despachamos su pedido al interior del país, por el expreso que Ud. solicite.</li>
-                    <li>Cálculo de Unidades de arandelas por kilogramo, según la forma y el material de la arandela.</li>
+                    <li>Estampado de diversos productos de acuerdo al plano del diseño y el/los material/es requerido/s.
+                    </li>
+                    <li>Contamos con vehículos propios para poder realizar entregas en Gran Buenos Aires y en Capital
+                        Federal a corto plazo. También despachamos su pedido al interior del país, por el expreso que
+                        Ud. solicite.</li>
+                    <li>Cálculo de Unidades de arandelas por kilogramo, según la forma y el material de la arandela.
+                    </li>
                 </ul>
             </div>
         </section>
@@ -235,18 +258,22 @@
         <!-- CONTACTO -->
         <section id="contact">
             <div class="container-fluid">
-                <h2>contacto</h2>
+                <h2>Nuestras vías de contacto</h2>
                 <div class="d-flex flex-column align-items-center">
-                    <p><span class="icon-home"></span> Av. Hipólito Yrigoyen 6963 - Banfield (B1828) - Buenos Aires, Argentina</p>
-                    <p><a href="https://maps.google.com.ar/maps?f=q&amp;source=embed&amp;hl=es-419&amp;geocode=&amp;q=Avenida+Hip%C3%B3lito+Yrigoyen+6963,+Banfield,+Buenos+Aires&amp;aq=0&amp;oq=Hip%C3%B3lito+Yrigoyen+6963,+Ban&amp;sll=-38.452918,-63.598921&amp;sspn=37.248188,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Av+Hip%C3%B3lito+Yrigoyen+6963,+Banfield,+Buenos+Aires&amp;ll=-34.73609,-58.397593&amp;spn=0.019221,0.042272&amp;t=m&amp;z=16" class="a_maps" target="_blank">(<i class="fa-solid fa-location-dot"></i> Ubicación)</a></p>
+                    <p><span class="icon-home"></span> Av. Hipólito Yrigoyen 6963 - Banfield (B1828) - Buenos Aires,
+                        Argentina</p>
+                    <p><a href="https://maps.google.com.ar/maps?f=q&amp;source=embed&amp;hl=es-419&amp;geocode=&amp;q=Avenida+Hip%C3%B3lito+Yrigoyen+6963,+Banfield,+Buenos+Aires&amp;aq=0&amp;oq=Hip%C3%B3lito+Yrigoyen+6963,+Ban&amp;sll=-38.452918,-63.598921&amp;sspn=37.248188,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Av+Hip%C3%B3lito+Yrigoyen+6963,+Banfield,+Buenos+Aires&amp;ll=-34.73609,-58.397593&amp;spn=0.019221,0.042272&amp;t=m&amp;z=16"
+                            class="a_maps" target="_blank">(<i class="fa-solid fa-location-dot"></i> Ubicación)</a></p>
                     <div class="mt-3">
                         <p><i class="fa-solid fa-phone"></i> +54(011) 4242-1359</p>
                         <p><i class="fa-solid fa-phone"></i> +54(011) 4202-9682</p>
                         <p><i class="fa-solid fa-phone"></i> +54(011) 4202-4799</p>
                     </div>
                     <div class="mt-3">
-                        <p><a href="mailto:contacto@arandelasrosa.com.ar?Subject=Consulta%20desde%20web"><i class="fa-solid fa-envelope"></i> contacto@arandelasrosa.com.ar</a></p>
-                        <p><a href="https://api.whatsapp.com/send?phone=+541162599017&text=Hola!%20Quisiera%20realizar%20una%20consulta..." target="_blank"><i class="fa-brands fa-whatsapp"></i> +54(011) 6259-9017</a></p>
+                        <p><a href="mailto:contacto@arandelasrosa.com.ar?Subject=Consulta%20desde%20web"><i
+                                    class="fa-solid fa-envelope"></i> contacto@arandelasrosa.com.ar</a></p>
+                        <p><a href="https://api.whatsapp.com/send?phone=+541162599017&text=Hola!%20Quisiera%20realizar%20una%20consulta..."
+                                target="_blank"><i class="fa-brands fa-whatsapp fa-beat"></i> +54(011) 6259-9017</a></p>
                     </div>
                 </div>
             </div>
