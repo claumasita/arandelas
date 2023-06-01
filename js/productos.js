@@ -87,7 +87,7 @@ const agregarProductosFiltrados=(productos)=>{
 //******************************************************************//
 // Listener BUSCAR
 //******************************************************************//
-const buscar=()=>{
+const btnBuscar=()=>{
 
     const btnBuscar = document.querySelector("#btn-buscar");
     btnBuscar.addEventListener("click", () =>{
@@ -191,12 +191,27 @@ const btnLimpiar=()=>{
 }
 
 //******************************************************************//
+// Mostrar Imagenes (Carrusel)
+//******************************************************************//
+const mostrarImagenes=()=>{
+    const carrusel = document.querySelector("#imagenes");
+    for (let i = 1; i <= 18; i++) {
+        let imgNumber = i.toString().padStart(2, '0');
+        const imagen = document.createElement("div");
+        imagen.className = "swiper-slide";
+        imagen.innerHTML = `<img src="./img/sw-${imgNumber}.jpg"/>`;
+        carrusel.append(imagen);
+    }
+}
+
+//******************************************************************//
 // Función Principal
 //******************************************************************//
 const inicio = async () =>{
     // Carga de Productos
     await cargarProductos();
-    buscar();
+    mostrarImagenes();
+    btnBuscar();
     btnLimpiar();
 }
 

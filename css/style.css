@@ -243,27 +243,6 @@ nav {
     font-weight: bold;
     font-size: 95%; }
 
-.productos {
-  margin-top: 50px; }
-
-.swiper {
-  height: 300px;
-  width: 700px; }
-
-.swiper-slide {
-  background-size: cover;
-  background-position: center; }
-  .swiper-slide:nth-child(1n) {
-    background-image: url("../img/img01.jpg"); }
-  .swiper-slide:nth-child(2n) {
-    background-image: url("../img/img02.jpg"); }
-  .swiper-slide:nth-child(3n) {
-    background-image: url("../img/img03.jpg"); }
-  .swiper-slide:nth-child(4n) {
-    background-image: url("../img/img04.jpg"); }
-  .swiper-slide:nth-child(5n) {
-    background-image: url("../img/img05.jpg"); }
-
 @media only screen and (max-width: 767px) {
   h1 {
     font-size: 30px; }
