@@ -274,12 +274,10 @@
             <div class="container-fluid">
                 <h2>servicios</h2>
                 <ul>
-                    <li>Estampado de diversos productos de acuerdo al plano del diseño y el/los material/es requerido/s.
-                    </li>
+                    <li>Estampado de diversos productos de acuerdo al plano del diseño y el/los material/es requerido/s.</li>
                     <li>Contamos con vehículos propios para poder realizar entregas en Gran Buenos Aires y en Capital
                         Federal a corto plazo. También despachamos su pedido al interior del país, por el expreso que
-                        Ud. solicite.</li>
-                    <li>Cálculo de Unidades de arandelas por kilogramo, según la forma y el material de la arandela.
+                        Ud. solicite.
                     </li>
                 </ul>
             </div>
@@ -289,6 +287,30 @@
         <section id="works">
             <div class="container-fluid">
                 <h2>consultas</h2>
+
+                <form class="container consultas" id="form-consulta">
+                    <div class="row mt-3">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+
+                    <div class="row mt-3">
+                        <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Empresa">
+                    </div>
+
+                    <div class="row mt-3">
+                        <input type="email" class="form-control" id="mail" name="mail" placeholder="E-Mail" required>
+                    </div>
+
+                    <div class="row mt-3">
+                        <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-3">
+                        <button type="submit" class="btn btn-primary" id="btn-submit">Enviar</button>
+                    </div>
+                    
+                </form>
+
             </div>
         </section>
 
@@ -318,7 +340,10 @@
 
     </div>
 
-    <!-- DARK MODE JS -->
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Dark Mode JS -->
     <script src="./js/toggles.js"></script>
 
     <!-- Swiper JS -->
@@ -326,6 +351,9 @@
 
     <!-- Initialize Swiper -->
     <script src="./js/swipe.js"></script>
+
+    <!-- Formulario de Consulta -->
+    <script src="./js/consulta.js"></script>
 
     <!-- Productos/Articulos -->
     <script src="./js/productos.js"></script>

@@ -469,6 +469,23 @@ nav {
     text-decoration: none;
     font-weight: bold;
     font-size: 95%; }
+  .main #works .consultas {
+    max-width: 600px; }
+    .main #works .consultas input {
+      height: 40px; }
+    .main #works .consultas textarea {
+      height: 150px; }
+    .main #works .consultas .btn {
+      font-family: "Century", arial;
+      text-align: center;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      width: 100px; }
+    .main #works .consultas .btn-disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+      background-color: darkgray;
+      color: white; }
 
 @media only screen and (max-width: 767px) {
   h1 {
