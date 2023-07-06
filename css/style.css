@@ -291,6 +291,8 @@ nav {
         color: var(--colors-active); }
       nav .menu a.active {
         color: var(--colors-active); }
+      nav .menu a:after {
+        display: none; }
   nav .toggle {
     border-top: 1px solid white;
     padding-top: 17px; }
@@ -389,10 +391,13 @@ nav {
   .main #contact p {
     text-align: center; }
   .main #contact a {
-    color: var(--colors-titles);
+    color: var(--colors-p);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 95%; }
+  .main #contact .a-phones {
+    color: var(--colors-p);
+    font-weight: normal; }
   .main #works .consultas {
     max-width: 600px; }
     .main #works .consultas input {
@@ -420,6 +425,12 @@ footer {
     font-size: 13px;
     color: var(--colors-p);
     font-weight: bold; }
+    footer div a {
+      color: var(--colors-p);
+      text-decoration: none; }
+      footer div a:hover {
+        text-decoration: none;
+        color: var(--colors-p); }
 
 @media only screen and (max-width: 767px) {
   h1 {

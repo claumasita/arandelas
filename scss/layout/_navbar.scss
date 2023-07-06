@@ -67,8 +67,8 @@ nav{
                 color: map-get($colors, "active" );
             }
 
+            &:after { display:none; }
         }
-
     }
 
     .toggle{

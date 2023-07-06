@@ -149,10 +149,15 @@
         }
 
         a {
-            color: map-get($colors, "titles");
+            color: map-get($colors, "p");
             text-decoration: none;
-            font-weight: bold;
+            font-weight: normal;
             font-size: 95%;
+        }
+
+        .a-phones{
+            color: map-get($colors, "p");
+            font-weight: normal;
         }
     }
 
@@ -196,5 +201,15 @@ footer{
         font-size: $font-size-footer;
         color: map-get($colors, "p" );
         font-weight: bold;
+
+        a{
+            color: map-get($colors, "p" );
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: none;
+                color: map-get($colors, "p" );
+            }
+        }
     }
 }
